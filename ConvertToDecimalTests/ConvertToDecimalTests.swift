@@ -116,4 +116,12 @@ class ConvertToDecimalTests: XCTestCase {
         //Assert
         XCTAssertNil(list)
     }
+
+    func testNumberInstantiationCheckTrue() {
+        XCTAssertTrue(Number(for: "CXC")?.value == 190)
+    }
+
+    func testNumberInstantiationCheckNil() {
+        XCTAssertNil(Number(for: "UII")?.value)
+    }
 }

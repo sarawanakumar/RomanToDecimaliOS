@@ -93,7 +93,7 @@ class PredecessorValidatorTests: XCTestCase {
         XCTAssertFalse(predVal.invalidPredecessorCheck)
     }
 
-    func testShouldReturnFalseForCompartiveCheck() {
+    func testShouldReturnFalseForCompartiveCheckWithGreaterMiddleValue() {
         //Arrange
         let numeral = "CMC"
         let list = RomanLinkedList(numeral)
@@ -103,6 +103,30 @@ class PredecessorValidatorTests: XCTestCase {
 
         //Assert
         XCTAssertFalse(predVal.comparitiveValidationCheck)
+    }
+
+    func testShouldReturnTrueForCompartiveCheckWithLesserMiddleValue() {
+        //Arrange
+        let numeral = "MCM"
+        let list = RomanLinkedList(numeral)
+        let predVal = PredecessorValidator(list!)
+
+        //Act
+
+        //Assert
+        XCTAssertTrue(predVal.comparitiveValidationCheck)
+    }
+
+    func testShouldReturnTrueForCompartiveCheckWithEqualMiddleValue() {
+        //Arrange
+        let numeral = "CCC"
+        let list = RomanLinkedList(numeral)
+        let predVal = PredecessorValidator(list!)
+
+        //Act
+
+        //Assert
+        XCTAssertTrue(predVal.comparitiveValidationCheck)
     }
 
     func testShouldReturnTrueForCompartiveCheck() {
