@@ -18,6 +18,8 @@
 		7E40F7282045552900595707 /* RomanLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E40F7272045552900595707 /* RomanLinkedList.swift */; };
 		7E40F72A20467A8500595707 /* OccurrenceValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E40F72920467A8500595707 /* OccurrenceValidator.swift */; };
 		7E40F72C20467AA800595707 /* PredecessorValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E40F72B20467AA800595707 /* PredecessorValidator.swift */; };
+		7E40F72E204680A300595707 /* OccurrenceValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E40F72D204680A300595707 /* OccurrenceValidatorTests.swift */; };
+		7E40F7312046844200595707 /* PredecessorValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E40F7302046844200595707 /* PredecessorValidatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		7E40F7272045552900595707 /* RomanLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomanLinkedList.swift; sourceTree = "<group>"; };
 		7E40F72920467A8500595707 /* OccurrenceValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OccurrenceValidator.swift; sourceTree = "<group>"; };
 		7E40F72B20467AA800595707 /* PredecessorValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredecessorValidator.swift; sourceTree = "<group>"; };
+		7E40F72D204680A300595707 /* OccurrenceValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OccurrenceValidatorTests.swift; sourceTree = "<group>"; };
+		7E40F7302046844200595707 /* PredecessorValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredecessorValidatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				7E378462204505F000F91206 /* ConvertToDecimalTests.swift */,
+				7E40F72D204680A300595707 /* OccurrenceValidatorTests.swift */,
+				7E40F7302046844200595707 /* PredecessorValidatorTests.swift */,
 				7E378464204505F000F91206 /* Info.plist */,
 			);
 			path = ConvertToDecimalTests;
@@ -229,6 +235,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E378463204505F000F91206 /* ConvertToDecimalTests.swift in Sources */,
+				7E40F7312046844200595707 /* PredecessorValidatorTests.swift in Sources */,
+				7E40F72E204680A300595707 /* OccurrenceValidatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

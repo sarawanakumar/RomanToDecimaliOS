@@ -10,16 +10,11 @@ import Foundation
 
 
 class OccurrenceValidator {
-    var romanLiteral: [RomanNumeral]
-    var list: RomanLinkedList?
 
-    init(_ roman: [RomanNumeral]) {
-        self.romanLiteral = roman
-    }
+    private var list: RomanLinkedList?
 
     init(_ roman: RomanLinkedList) {
         list = roman
-        romanLiteral = []
     }
 
     var validate: Bool {
@@ -39,21 +34,5 @@ class OccurrenceValidator {
             currentDigit = currentDigit?.next
         }
         return digitOccCounter <= 3
-    }
-
-    func validated() -> Bool {
-        var previousDigit: RomanNumeral?
-        var sameDigitCounter = 0
-        for index in romanLiteral.indices {
-            if previousDigit == romanLiteral[index] {
-                sameDigitCounter += 1
-            }
-
-            if sameDigitCounter >= 3 {
-                return false
-            }
-            previousDigit = romanLiteral[index]
-        }
-        return true
     }
 }

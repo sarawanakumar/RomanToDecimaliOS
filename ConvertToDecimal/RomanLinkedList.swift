@@ -24,14 +24,6 @@ class RomanLinkedList {
         return head
     }
 
-    var last: Roman? {
-        return tail
-    }
-
-    var isEmpty: Bool {
-        return head == nil
-    }
-
     init?(_ roman: String) {
         do {
             try createRoman(roman)

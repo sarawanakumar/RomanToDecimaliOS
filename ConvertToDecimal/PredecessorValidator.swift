@@ -55,7 +55,7 @@ class PredecessorValidator {
     }
 
     //VIV - validate
-    var invalidPredecessorCheck: Bool {
+    var invalidPredecessorCheck: Bool {//DMMM
         var currentDigit = list?.first?.next
 
         while currentDigit != nil {
@@ -74,33 +74,25 @@ class PredecessorValidator {
         return true
     }
 
+    var comparitiveValidationCheck: Bool {//XCX
+        var currentDigit = list?.first?.next
+
+        while currentDigit != nil {
+            if let prevDigit = currentDigit?.previous,
+                let nextDigit = currentDigit?.next,
+                prevDigit.element == nextDigit.element,
+                prevDigit.element != currentDigit?.element {
+                    return false
+            }
+            currentDigit = currentDigit?.next
+        }
+        return true
+    }
+
     var validate: Bool {
         return negativeNumeralValidated &&
             immediatePredecessorValidated &&
-        invalidPredecessorCheck
-    }
-
-    func validated() -> Bool {
-        var previousDigit: RomanNumeral?
-        for index in romanLiteral.indices {
-            let currentDigit = romanLiteral[index]
-
-            if let previousDigit = previousDigit,
-                previousDigit.intValue <= currentDigit.intValue {
-                if let validNegPredecesor = currentDigit.validNegativePredecessor,
-                    previousDigit != validNegPredecesor {
-                    return false
-                }
-                if index >= 2 {
-                    let secondPrevious = romanLiteral[index - 2]
-                    if secondPrevious.intValue < currentDigit.intValue {
-                        return false
-                    }
-                }
-            }
-
-            previousDigit = romanLiteral[index]
-        }
-        return true
+            invalidPredecessorCheck &&
+            comparitiveValidationCheck
     }
 }

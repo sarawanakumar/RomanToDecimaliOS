@@ -105,4 +105,15 @@ class ConvertToDecimalTests: XCTestCase {
         //Assert
         XCTAssert(number == 99)
     }
+
+    func testShouldReturnNilNumberForInvalidRomanNumeral() {
+        //Arrange
+        let numeral = "XCFIX"
+        let list = RomanLinkedList(numeral)
+
+        //Act
+
+        //Assert
+        XCTAssertNil(list)
+    }
 }
