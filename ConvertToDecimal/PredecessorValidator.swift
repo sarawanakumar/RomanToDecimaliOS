@@ -78,10 +78,11 @@ class PredecessorValidator {
         var currentDigit = list?.first?.next
 
         while currentDigit != nil {
-            if let prevDigit = currentDigit?.previous,
+            if let cDigit = currentDigit,
+                let prevDigit = currentDigit?.previous,
                 let nextDigit = currentDigit?.next,
                 prevDigit.element == nextDigit.element,
-                prevDigit.element != currentDigit?.element {
+                prevDigit.element.intValue < cDigit.element.intValue {
                     return false
             }
             currentDigit = currentDigit?.next
