@@ -25,6 +25,7 @@ class ViewController: UIViewController {
                 return
         }
 
+        errorLabel.isHidden = true
         decimalTextField.text = "\(number)"
     }
 }
